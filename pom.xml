@@ -4,6 +4,8 @@
   <artifactId>zjs-grape</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <description>This is for Spring and SpringBoot</description>
+  
   <parent>
   	<groupId>org.springframework.boot</groupId>
   	<artifactId>spring-boot-starter-parent</artifactId>
@@ -11,6 +13,43 @@
   </parent>
   
   <dependencies>
+<!--   	<dependency>
+        <groupId>io.micrometer</groupId>
+        <artifactId>micrometer-registry-influx</artifactId>
+    </dependency> -->
+    
+    <dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-data-redis</artifactId>
+	</dependency>
+    
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+    </dependency>
+    
+    <dependency>
+	    <groupId>org.bouncycastle</groupId>
+	    <artifactId>bcprov-jdk15on</artifactId>
+	    <version>1.60</version>
+	</dependency>
+    
+    <dependency>
+	    <groupId>commons-codec</groupId>
+	    <artifactId>commons-codec</artifactId>
+	</dependency>
+    
+    <dependency>
+	    <groupId>com.alibaba.nacos</groupId>
+	    <artifactId>nacos-spring-context</artifactId>
+	    <version>0.2.2-RC1</version>
+	</dependency>
+    <dependency>
+		<groupId>com.alibaba.nacos</groupId>
+		<artifactId>nacos-client</artifactId>
+		<version>1.0.0</version>
+	</dependency>
+  
   	<dependency>
   		<groupId>org.springframework.boot</groupId>
   		<artifactId>spring-boot-starter-web</artifactId>
@@ -23,8 +62,25 @@
   	
   	<dependency>
   		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-test</artifactId>
+  		<scope>test</scope>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
   		<artifactId>spring-boot-devtools</artifactId>
   	</dependency>
+  	
+   	<dependency>
+	  <groupId>com.fasterxml.jackson.dataformat</groupId>
+	  <artifactId>jackson-dataformat-xml</artifactId>
+	</dependency>
+	
+<!-- 	<dependency>
+	    <groupId>com.thoughtworks.xstream</groupId>
+	    <artifactId>xstream</artifactId>
+	    <version>1.4.10</version>
+	</dependency> -->
   
   	<dependency>
   		<groupId>com.hazelcast</groupId>
