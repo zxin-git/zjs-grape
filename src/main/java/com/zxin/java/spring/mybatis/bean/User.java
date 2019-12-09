@@ -13,12 +13,11 @@ import lombok.Data;
 @TableName("user")
 public class User {
 
-    private int id;
+    private Long id;
 
     private String name;
 
-    private int age;
+    private Integer age;
 
     private String email;
-
 }
