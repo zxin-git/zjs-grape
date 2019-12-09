@@ -13,7 +13,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
  *
  */
 @SpringBootApplication
-@ComponentScan("com.zxin.java.spring.mybatis")
+@ComponentScan("com.zxin.java.spring.jackson")
 public class BootApplication {
 
 	private static final Logger log = LoggerFactory.getLogger(BootApplication.class);

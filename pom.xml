@@ -28,12 +28,12 @@
 	    <artifactId>spring-boot-starter-json</artifactId>
 	</dependency> -->
 
-    <dependency>
+    <!--<dependency>
 	    <groupId>com.github.danielwegener</groupId>
 	    <artifactId>logback-kafka-appender</artifactId>
 	    <version>0.1.0</version>
 	    <scope>runtime</scope>
-	</dependency>
+	</dependency>-->
 	<!-- <dependency>
 	    <groupId>net.logstash.logback</groupId>
 	    <artifactId>logstash-logback-encoder</artifactId>
