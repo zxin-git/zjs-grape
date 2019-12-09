@@ -5,13 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- *
- * @author zxin
+ * @author ZHANGXIN130
  */
 @Data
 @AllArgsConstructor
-@TableName("user")
-public class User {
+public class Person {
 
     private Long id;
 
