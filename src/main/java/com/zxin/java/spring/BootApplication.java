@@ -6,14 +6,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
  * @author zxin
  *
  */
 @SpringBootApplication
-@ComponentScan("com.zxin.java.spring.jackson")
+@ComponentScan("com.zxin.java.spring.redisson")
 public class BootApplication {
 
 	private static final Logger log = LoggerFactory.getLogger(BootApplication.class);
