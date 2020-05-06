@@ -23,7 +23,7 @@ public class RedissonConfig {
     @Bean
     public Config config(){
         Config config = new Config();
-        config.useSingleServer().setAddress("redis://192.168.47.131:6379");
+        config.useSingleServer().setAddress("redis://192.168.47.134:6379");
         config.setCodec(StringCodec.INSTANCE);
         return config;
     }
