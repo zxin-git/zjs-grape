@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -56,10 +57,12 @@ public class RLockTest {
     @Test
     public void lock1() {
         ExecutorService executorService = Executors.newCachedThreadPool();
+        DKey dKey = new DKey("name", LocalDate.now(), 222);
         for (int i = 0; i < 10; i++) {
-            executorService.execute(() -> {
-                dLockDemoService.demo1("2000014","King","PMS-RATE");
-            });
+//            executorService.execute(() -> {
+//                dLockDemoService.demo1("2000014","King","PMS-RATE");
+                dLockDemoService.demo2(dKey);
+//            });
         }
         System.out.println("q1");
         while (true){

@@ -16,7 +16,6 @@ import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author zxin
@@ -39,9 +38,10 @@ public class DLockAspect {
     public Object around(ProceedingJoinPoint joinPoint, DLock dLock) throws Throwable{
         String name = name(joinPoint, dLock);
         RLock lock = redisson.getLock(name);
-        boolean acquired = lock.tryLock(10, 10, TimeUnit.SECONDS);
-        if(acquired){
+//        boolean acquired = lock.tryLock(10, 10, TimeUnit.SECONDS);
+//        if(acquired){
             try {
+                lock.lock();
                 return joinPoint.proceed();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
@@ -49,9 +49,9 @@ public class DLockAspect {
             } finally {
                 lock.unlock();
             }
-        } else {
-            throw new DLockException(String.format("获取锁异常[%s]", name));
-        }
+//        } else {
+//            throw new DLockException(String.format("获取锁异常[%s]", name));
+//        }
 
     }
 

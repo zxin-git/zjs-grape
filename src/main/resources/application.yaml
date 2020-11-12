@@ -1,0 +1,27 @@
+server:
+  tomcat:
+    max-threads: 1000
+  port: 8888
+
+---
+management:
+  server:
+    address: 127.0.0.1
+    port: 9001
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+---
+spring:
+  messages:
+    encoding: UTF-8
+    basename: message/messages_zh
+  redis:
+    database: 0
+    password:
+    port: 6379
+    host: 192.168.47.134
+    timeout: 1000
+
