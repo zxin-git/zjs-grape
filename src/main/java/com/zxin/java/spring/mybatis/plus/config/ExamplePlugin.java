@@ -1,4 +1,4 @@
-package com.zxin.java.spring.mybatis.config;
+package com.zxin.java.spring.mybatis.plus.config;
 
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.MappedStatement;

@@ -1,13 +1,12 @@
 package com.zxin.java.spring.mybatis.service;
 
-import com.zxin.java.spring.mybatis.bean.User;
+import com.zxin.java.spring.mybatis.plus.entity.User;
 import org.assertj.core.util.Lists;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 

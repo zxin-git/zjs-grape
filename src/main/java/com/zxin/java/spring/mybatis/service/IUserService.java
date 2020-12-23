@@ -1,7 +1,7 @@
 package com.zxin.java.spring.mybatis.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.zxin.java.spring.mybatis.bean.User;
+import com.zxin.java.spring.mybatis.plus.entity.User;
 
 /**
  * 包含自定义方法的IService实现类

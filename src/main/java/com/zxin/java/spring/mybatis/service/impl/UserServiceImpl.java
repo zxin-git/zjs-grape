@@ -1,8 +1,8 @@
 package com.zxin.java.spring.mybatis.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.zxin.java.spring.mybatis.bean.User;
-import com.zxin.java.spring.mybatis.mapper.UserMapper;
+import com.zxin.java.spring.mybatis.plus.entity.User;
+import com.zxin.java.spring.mybatis.plus.mapper.UserMapper;
 import com.zxin.java.spring.mybatis.service.IUserService;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,7 @@
 package com.zxin.java.spring.mybatis.mapper;
 
-import com.zxin.java.spring.mybatis.bean.User;
+import com.zxin.java.spring.mybatis.plus.entity.User;
+import com.zxin.java.spring.mybatis.plus.mapper.UserMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

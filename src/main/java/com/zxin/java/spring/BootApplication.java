@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 //@ComponentScan("com.zxin.java.spring.swagger,com.zxin.java.spring.huazhu")
-@ComponentScan("com.zxin.java.spring.exception")
+@ComponentScan("com.zxin.java.spring.mybatis")
 public class BootApplication {
 	
 	public static void main(String[] args) {

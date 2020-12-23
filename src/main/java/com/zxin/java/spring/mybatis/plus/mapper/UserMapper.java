@@ -1,8 +1,7 @@
-package com.zxin.java.spring.mybatis.mapper;
+package com.zxin.java.spring.mybatis.plus.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.zxin.java.spring.mybatis.bean.User;
-import org.springframework.stereotype.Service;
+import com.zxin.java.spring.mybatis.plus.entity.User;
 
 /**
  * @author ZHANGXIN130

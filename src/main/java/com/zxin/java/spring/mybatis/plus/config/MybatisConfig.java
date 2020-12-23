@@ -1,13 +1,15 @@
-package com.zxin.java.spring.mybatis.config;
+package com.zxin.java.spring.mybatis.plus.config;
 
+import com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.zxin.java.spring.mybatis.bean.User;
-import com.zxin.java.spring.mybatis.mapper.UserMapper;
+import com.zxin.java.spring.mybatis.plus.entity.User;
+import com.zxin.java.spring.mybatis.plus.mapper.UserMapper;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  *
@@ -15,8 +17,14 @@ import org.springframework.context.annotation.Configuration;
  * @author ZHANGXIN130
  */
 @Configuration
-@MapperScan("com.zxin.java.spring.mybatis.mapper")
+@EnableTransactionManagement
+@MapperScan("com.zxin.java.spring.mybatis.plus.mapper")
 public class MybatisConfig {
+
+
+    public OptimisticLockerInterceptor optimisticLockerInterceptor(){
+        return new OptimisticLockerInterceptor();
+    }
 
     /**
      * for 物理分页
