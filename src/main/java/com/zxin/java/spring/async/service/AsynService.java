@@ -1,13 +1,13 @@
 package com.zxin.java.spring.async.service;
 
-import java.util.concurrent.Future;
-import java.util.stream.Stream;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Component;
+
+import java.util.concurrent.Future;
+import java.util.stream.Stream;
 
 @Component
 public class AsynService {
@@ -22,6 +22,11 @@ public class AsynService {
 	
 	@Async("asyncThreadPoolTaskExectutor")
 	public <T> Future<T> asynFuture(Stream<T> stream){
+		try {
+			Thread.sleep(1000 * 10);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		logger.info("asynFuture当前执行线程为：[{}]", Thread.currentThread().getName());
 //		stream.forEach(System.out::println);
 		return new AsyncResult<T>(stream.iterator().next());

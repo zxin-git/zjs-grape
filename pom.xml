@@ -12,10 +12,11 @@
   	<version>2.1.4.RELEASE</version>
   </parent>
   
-  <properties>
-    	<swagger.version>2.9.2</swagger.version>
-    	<spring-cloud.version>Edgware.SR6</spring-cloud.version>
-  </properties>
+	<properties>
+		<swagger.version>2.9.2</swagger.version>
+		<spring-cloud.version>Edgware.SR6</spring-cloud.version>
+		<org.mapstruct.version>1.4.1.Final</org.mapstruct.version>
+	</properties>
   
   <dependencies>
 	  <dependency>
@@ -196,11 +197,24 @@
 	  <artifactId>redisson</artifactId>
 	  <version>3.11.6</version>
 	</dependency>
-<!--	<dependency>
-	  <groupId>org.redisson</groupId>
-	  <artifactId>redisson-spring-boot-starter</artifactId>
-	  <version>3.11.6</version>
-	</dependency>-->
 
+	  <dependency>
+		  <groupId>com.xuxueli</groupId>
+		  <artifactId>xxl-job-core</artifactId>
+		  <version>2.2.0</version>
+	  </dependency>
+
+	  <dependency>
+		  <groupId>com.github.binarywang</groupId>
+		  <artifactId>weixin-java-miniapp</artifactId>
+		  <version>3.4.0</version>
+	  </dependency>
+
+	  <!--	<dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+            <version>3.11.6</version>
+          </dependency>-->
   </dependencies>
+
 </project>

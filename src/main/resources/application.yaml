@@ -1,13 +1,13 @@
 server:
   tomcat:
     max-threads: 1000
-  port: 8888
+  port: 9000
 
 ---
 management:
   server:
     address: 127.0.0.1
-    port: 9001
+    port: 9000
   endpoints:
     web:
       exposure:
@@ -22,6 +22,12 @@ spring:
     database: 0
     password:
     port: 6379
-    host: 192.168.47.134
+#    host: 192.168.47.134
+    host: 127.0.0.1
     timeout: 1000
+  # jackson日期格式化
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
 
