@@ -6,26 +6,19 @@ import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.Version;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
  * @author zxin
  */
 @Data
-public class Inventory {
+public class Entity implements Serializable {
 
     @TableId(type = IdType.AUTO)
     private Long id;
 
-    private String code;
 
-    private String name;
-
-    private Long stock;
-
-    private Long expend;
-
-    //    @TableField(fill = FieldFill.UPDATE)
     @Version
     private Long version;
 

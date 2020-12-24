@@ -51,12 +51,15 @@ public class InventoryMapperTest {
     @Test
     public void testOptimisticLocker(){
         Inventory inventory = mapper.selectById(1L);
-        inventory.setCode("c1");
-        inventory.setName("n1");
-        inventory.setStock(10L);
-        inventory.setExpend(2L);
+        Inventory inventory1 = new Inventory();
+        inventory1.setId(inventory.getId());
+        inventory1.setCode("c1");
+        inventory1.setVersion(inventory.getVersion());
+//        inventory.setName("n1");
+//        inventory.setStock(10L);
+//        inventory.setExpend(2L);
         // 3、执行更新操作
-        mapper.updateById(inventory);
+        mapper.updateById(inventory1);
     }
 
     @Test
@@ -73,10 +76,33 @@ public class InventoryMapperTest {
         inventory3.setName("n3");
         inventory3.setStock(3L);
         inventory3.setExpend(3L);
-        mapper.updateById(inventory3);
+        int update3 = mapper.updateById(inventory3);
 
         // 3、执行更新操作
-        mapper.updateById(inventory2);
+        int update2 = mapper.updateById(inventory2);
+        log.info("3:[{}], 2:[{}]", update3, update2);
     }
 
+    @Test
+    public void testLogicDelete(){
+        mapper.deleteById(1);
+    }
+
+    @Test
+    public void testLogicSelect(){
+        List<Inventory> list = mapper.selectList(null);
+        Inventory inventory = mapper.selectById(1L);
+        log.info("list:[{}], inventory:[{}]", list, inventory);
+    }
+
+    @Test
+    public void testLogicUpdate(){
+        Inventory inventory = mapper.selectById(2L);
+        inventory.setCode("c1");
+        inventory.setName("n1");
+        inventory.setStock(1L);
+        inventory.setExpend(1L);
+        int row = mapper.updateById(inventory);
+        log.info("[{}]", row);
+    }
 }

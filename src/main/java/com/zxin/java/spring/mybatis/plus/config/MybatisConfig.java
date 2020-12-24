@@ -21,10 +21,23 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @MapperScan("com.zxin.java.spring.mybatis.plus.mapper")
 public class MybatisConfig {
 
-
+    /**
+     * 乐观锁插件
+     * @return
+     */
+    @Bean
     public OptimisticLockerInterceptor optimisticLockerInterceptor(){
         return new OptimisticLockerInterceptor();
     }
+
+    /**
+     * 逻辑删除插件
+     * @return
+     */
+//    @Bean
+//    public LogicDeleteByIdWithFill logicDeleteByIdWithFill() {
+//        return new LogicDeleteByIdWithFill();
+//    }
 
     /**
      * for 物理分页
