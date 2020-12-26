@@ -1,5 +1,6 @@
 package com.zxin.java.spring.mybatis.plus.mapper;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zxin.java.spring.mybatis.plus.entity.Inventory;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -104,5 +105,15 @@ public class InventoryMapperTest {
         inventory.setExpend(1L);
         int row = mapper.updateById(inventory);
         log.info("[{}]", row);
+    }
+
+    @Test
+    public void testPage(){
+        // 参数一：当前页
+        // 参数二：页面大小
+        Page<Inventory> page = new Page<>(2,5);
+        mapper.selectPage(page,null);
+        page.getRecords().forEach(System.out::println);
+        System.out.println(page.getTotal());
     }
 }

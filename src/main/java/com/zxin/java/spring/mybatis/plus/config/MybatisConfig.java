@@ -31,15 +31,6 @@ public class MybatisConfig {
     }
 
     /**
-     * 逻辑删除插件
-     * @return
-     */
-//    @Bean
-//    public LogicDeleteByIdWithFill logicDeleteByIdWithFill() {
-//        return new LogicDeleteByIdWithFill();
-//    }
-
-    /**
      * for 物理分页
      * @return
      */
@@ -47,6 +38,16 @@ public class MybatisConfig {
     public PaginationInterceptor paginationInterceptor(){
         return new PaginationInterceptor();
     }
+
+
+    /**
+     * 逻辑删除插件
+     * @return
+     */
+//    @Bean
+//    public LogicDeleteByIdWithFill logicDeleteByIdWithFill() {
+//        return new LogicDeleteByIdWithFill();
+//    }
 
     /**
      * 构建默认IService实现类
