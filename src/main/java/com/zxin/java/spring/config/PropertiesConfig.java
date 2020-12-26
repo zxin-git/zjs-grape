@@ -13,9 +13,9 @@ import org.springframework.context.annotation.Configuration;
 @EnableConfigurationProperties
 public class PropertiesConfig {
 
-    @ConfigurationProperties(prefix = "another")
-    @Bean
-    public RedisProperties anotherComponent() {
-        return null;
-    }
+//    @ConfigurationProperties(prefix = "another")
+//    @Bean
+//    public RedisProperties anotherComponent() {
+//        return null;
+//    }
 }
