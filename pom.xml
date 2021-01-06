@@ -13,8 +13,10 @@
   </parent>
   
 	<properties>
+		<java.version>1.8</java.version>
+		<spring-cloud.version>Greenwich.SR6</spring-cloud.version>
+
 		<swagger.version>2.9.2</swagger.version>
-		<spring-cloud.version>Edgware.SR6</spring-cloud.version>
 		<org.mapstruct.version>1.4.1.Final</org.mapstruct.version>
 	</properties>
   
@@ -219,6 +221,27 @@
             <artifactId>redisson-spring-boot-starter</artifactId>
             <version>3.11.6</version>
           </dependency>-->
+
+	  <dependency>
+		  <groupId>org.springframework.cloud</groupId>
+		  <artifactId>spring-cloud-starter-openfeign</artifactId>
+	  </dependency>
+	  <dependency>
+		  <groupId>io.github.openfeign</groupId>
+		  <artifactId>feign-okhttp</artifactId>
+	  </dependency>
   </dependencies>
 
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
