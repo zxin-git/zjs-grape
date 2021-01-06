@@ -1,0 +1,4 @@
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-enums-package: com.zxin.java.spring.mybatis.plus.enums
