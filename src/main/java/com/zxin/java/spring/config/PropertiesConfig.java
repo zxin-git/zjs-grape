@@ -18,4 +18,12 @@ public class PropertiesConfig {
 //    public RedisProperties anotherComponent() {
 //        return null;
 //    }
+
+
+    // 使用配置文件，属性的值初始化这里bean定义所产生的bean实例的同名属性，
+    @Bean
+    @ConfigurationProperties(prefix = "bean.chance")
+    public ChanceProperties beanChanceProperties() {
+        return new ChanceProperties();
+    }
 }

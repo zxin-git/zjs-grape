@@ -40,3 +40,9 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+---
+bean:
+  chance:
+    id: 1
+    name: n1
