@@ -115,17 +115,14 @@ public class DateUtil {
         return formatter.format(LocalDateTime.ofInstant(date.toInstant(), ZoneId.systemDefault()));
     }
 
-    public static LocalDateTime toLocalDateTime(Long timestamp) {
+    public static LocalDateTime parse(Long timestamp) {
         return timestamp == null ? null : LocalDateTime.ofInstant(Instant.ofEpochMilli(timestamp), ZoneOffset.ofHours(8));
     }
 
-    public static LocalDateTime toLocalDateTime(Date date) {
+    public static LocalDateTime parse(Date date) {
         return date == null ? null : LocalDateTime.ofInstant(date.toInstant(), ZoneOffset.ofHours(8));
     }
 
-    public static LocalDateTime toLocalDateTime(String datetime) {
-        return LocalDateTime.parse(datetime, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-    }
 
     public static Long toTimestamp(LocalDateTime time) {
         return time == null ? null : time.toInstant(ZoneOffset.ofHours(8)).toEpochMilli();
@@ -141,6 +138,12 @@ public class DateUtil {
         }
 
         return d.compareTo(begin) >= 0 && d.compareTo(end) <= 0;
+    }
+
+
+
+    public static LocalDateTime parse(String text) {
+        return LocalDateTime.parse(text, DateTimeFormatter.ofPattern(FULL_DEFAULT));
     }
 
 }
