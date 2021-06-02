@@ -14,29 +14,4 @@ management:
         include: "*"
 
 ---
-spring:
-  messages:
-    encoding: UTF-8
-    basename: message/messages_zh
-  redis:
-    database: 0
-    password:
-    port: 6379
-#    host: 192.168.47.134
-    host: 127.0.0.1
-    timeout: 1000
-  # jackson日期格式化
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
-  datasource:
-    url: jdbc:mysql://localhost:3306/mybatis?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: root
 
-
-
-mybatis-plus:
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
