@@ -26,9 +26,32 @@
 		<mybatis-plus-boot-starter.version>3.1.0</mybatis-plus-boot-starter.version>
 		<mybatis-plus.version>3.1.0</mybatis-plus.version>
 		<mysql-connector-java.version>5.1.47</mysql-connector-java.version>
+
+		<nacos.spring-boot.version>0.2.9</nacos.spring-boot.version>
+		<nacos.spring-cloud.version>2.1.4.RELEASE</nacos.spring-cloud.version>
+		<nacos.version>1.4.1</nacos.version>
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+			<version>${nacos.spring-cloud.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+			<version>${nacos.spring-cloud.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba.boot</groupId>
+			<artifactId>nacos-config-spring-boot-starter</artifactId>
+			<version>${nacos.spring-boot.version}</version>
+		</dependency>
+
 		<!-- compile -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
