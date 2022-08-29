@@ -1,1 +1,1 @@
-### Example for Spring and Component
+### Example for Spring Boot and Component
