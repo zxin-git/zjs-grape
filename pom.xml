@@ -78,6 +78,10 @@
 		<!-- 3rd -->
 		<dependency>
 			<groupId>io.github.openfeign</groupId>
+			<artifactId>feign-gson</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.github.openfeign</groupId>
 			<artifactId>feign-okhttp</artifactId>
 			<version>${openfeign.version}</version>
 		</dependency>
